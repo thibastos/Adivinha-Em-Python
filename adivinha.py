@@ -10,6 +10,7 @@ print(numero_secreto)
 print("Selecione a dificuldade")
 print("(1) Fácil    (2) Médio (3) Difícil")
 dificuldade = int(input("Escolha: "))
+print("\n")
 
 if dificuldade == 1:
     tentativas = 15
@@ -22,6 +23,7 @@ if dificuldade == 3:
 
 for chutes in range(tentativas):
 
+    print("Tentativa {} de {}".format(chutes, tentativas))
     chute = int(input("Digite um número: "))
 
     if chute <= 0 :
