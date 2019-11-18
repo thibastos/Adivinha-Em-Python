@@ -21,14 +21,18 @@ if dificuldade == 2:
 if dificuldade == 3:
     tentativas = 5
 
+pontos = 1000
+
 for chutes in range(tentativas):
 
-    print("Tentativa {} de {}".format(chutes, tentativas))
+    print("Tentativa {} de {}".format(chutes + 1, tentativas))
     chute = int(input("Digite um número: "))
 
     if chute <= 0 :
         print("Digite um número positivo!")
         continue;
+
+    pontos = pontos - (abs(numero_secreto - chute))
 
     if chute == numero_secreto:
         print("Você acertou!")
@@ -41,3 +45,4 @@ for chutes in range(tentativas):
             print("Você chutou um número menor!\n")
 
 print("Fim de jogo!")
+print(pontos)
