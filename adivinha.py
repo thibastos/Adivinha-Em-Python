@@ -11,8 +11,16 @@ print("Selecione a dificuldade")
 print("(1) Fácil    (2) Médio (3) Difícil")
 dificuldade = int(input("Escolha: "))
 
+if dificuldade == 1:
+    tentativas = 15
 
-for tentativas in range(1, 6):
+if dificuldade == 2:
+    tentativas = 10
+
+if dificuldade == 3:
+    tentativas = 5
+
+for chutes in range(tentativas):
 
     chute = int(input("Digite um número: "))
 
